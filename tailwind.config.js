@@ -9,6 +9,8 @@ export default {
             fontFamily: {
                 sans: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
                 display: ['"Poppins"', 'system-ui', '-apple-system', 'sans-serif'],
+                // Google's own UI face, used only inside the reviews widget.
+                roboto: ['"Roboto"', 'Arial', 'sans-serif'],
             },
             colors: {
                 ink: "#131628",     // navy text + header

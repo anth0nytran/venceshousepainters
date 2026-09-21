@@ -14,8 +14,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <header className="bg-ink text-white">
                 <div className="wrap flex h-[64px] items-center justify-between gap-4 sm:h-[72px]">
                     <Link to="/" className="flex items-center gap-2.5" aria-label={`${LEGAL_NAME} home`}>
-                        <span className="flex h-9 w-9 items-center justify-center rounded-md bg-brand text-lg font-black text-white">V</span>
-                        <span className="text-[15px] font-bold uppercase tracking-wide sm:text-[17px]">Vences House Painters</span>
+                        <img src="/img/logo-mark.webp" alt="" width={160} height={125} className="h-9 w-auto sm:h-10" />
+                        <img src="/img/logo-word.webp" alt={LEGAL_NAME} width={520} height={113} className="h-7 w-auto sm:h-8" />
                     </Link>
                     <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-[14px] font-semibold text-white hover:bg-brand-dark">
                         <Phone className="h-4 w-4" aria-hidden="true" />
@@ -27,24 +27,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <main className="flex-1">{children}</main>
 
-            <footer className="border-t border-line bg-[#F5F6F8]">
-                <div className="wrap grid gap-6 py-10 text-[14px] text-slate sm:grid-cols-2">
+            <footer className="bg-ink text-white/75">
+                <div className="wrap grid gap-8 py-10 text-[14px] sm:grid-cols-[auto_1fr_auto] sm:items-center">
+                    <img src="/img/logo-lockup.webp" alt={LEGAL_NAME} width={640} height={586} loading="lazy" className="h-24 w-auto" />
                     <div>
-                        <p className="font-semibold text-ink">{LEGAL_NAME}</p>
+                        <p className="font-semibold text-white">{LEGAL_NAME}</p>
                         <p>{ADDRESS.street}</p>
                         <p>{ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}</p>
                         <p className="mt-2">
-                            <a href={`tel:${PHONE_TEL}`} className="hover:text-ink">{PHONE_DISPLAY}</a>
-                            {" · "}
-                            <a href={`mailto:${EMAIL}`} className="hover:text-ink">{EMAIL}</a>
+                            <a href={`tel:${PHONE_TEL}`} className="hover:text-white">{PHONE_DISPLAY}</a>
+                            <span aria-hidden="true"> | </span>
+                            <a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a>
                         </p>
                     </div>
                     <nav aria-label="Legal" className="flex flex-col gap-2 sm:items-end">
-                        <Link to="/" className="hover:text-ink">Request an Estimate</Link>
-                        <Link to={PRIVACY_PATH} className="hover:text-ink">Privacy Policy</Link>
-                        <Link to={TERMS_PATH} className="hover:text-ink">Terms of Service</Link>
+                        <Link to="/" className="hover:text-white">Request an Estimate</Link>
+                        <Link to={PRIVACY_PATH} className="hover:text-white">Privacy Policy</Link>
+                        <Link to={TERMS_PATH} className="hover:text-white">Terms of Service</Link>
                     </nav>
-                    <p className="text-[12px] sm:col-span-2">
+                    <p className="text-[12px] text-white/50 sm:col-span-3">
                         © {new Date().getFullYear()} {LEGAL_NAME}. All rights reserved.
                     </p>
                 </div>
