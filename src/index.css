@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   VENCES HOUSE PAINTERS — estimate + policy pages.
+   Warm white page, near-black ink, one deep-blue accent.
+   Headlines: DM Serif Display. Body/UI: Inter.
+   ============================================================ */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-paper text-ink font-sans;
+    line-height: 1.6;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-5xl px-4 sm:px-6; }
+  .eyebrow { @apply text-[12px] font-semibold uppercase tracking-[0.14em] text-brand; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-[15px] font-semibold transition-colors;
+  }
+  .btn-primary { @apply bg-ink text-paper hover:bg-brand-dark; }
+  .input {
+    @apply w-full rounded-md border border-line bg-white px-4 py-3 text-base text-ink placeholder:text-slate/50 transition-colors focus:border-brand focus:outline-none;
+  }
+  .input-error { @apply border-red-500; }
+}
