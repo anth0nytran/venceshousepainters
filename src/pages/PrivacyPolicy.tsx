@@ -38,7 +38,7 @@ export default function PrivacyPolicy() {
             </Section>
 
             <Section title="Cookies & Analytics">
-                <p>We store basic visit information in your browser (such as the page you first arrived on and any campaign link you used) so we can understand how people find us. You can clear this at any time through your browser settings.</p>
+                <p>We store basic visit information in your browser (such as the page you first arrived on and any campaign link you used) so we can understand how people find us. We also use the Meta (Facebook) Pixel and Meta Conversions API to measure how our Facebook and Instagram ads perform. When you visit or request an estimate, Meta may receive technical information about your visit and a hashed (scrambled) copy of your email and phone number so it can match the visit to an ad. You can clear cookies through your browser settings and manage ad preferences in your Facebook account.</p>
             </Section>
 
             <Section title="How We Share Information">

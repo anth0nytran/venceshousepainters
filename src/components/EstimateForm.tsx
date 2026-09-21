@@ -57,6 +57,28 @@ async function solveProofOfWork(ts: number, signal?: { cancelled: boolean }): Pr
     return "0";
 }
 
+/** Read a cookie set by the Meta pixel (_fbp) or by an ad click (_fbc). */
+function readCookie(name: string): string {
+    if (typeof document === "undefined") return "";
+    const m = document.cookie.match(new RegExp(`(?:^|; )${name}=([^;]*)`));
+    return m ? decodeURIComponent(m[1]) : "";
+}
+
+/** _fbc from the cookie, or built from ?fbclid= when the cookie isn't set yet. */
+function metaClickId(): string {
+    const c = readCookie("_fbc");
+    if (c) return c;
+    const id = new URLSearchParams(window.location.search).get("fbclid");
+    return id ? `fb.1.${Date.now()}.${id}` : "";
+}
+
+type Fbq = (...args: unknown[]) => void;
+
+function newEventId(): string {
+    if (typeof crypto !== "undefined" && "randomUUID" in crypto) return crypto.randomUUID();
+    return `lead-${Date.now()}-${Math.random().toString(36).slice(2)}`;
+}
+
 const EMAIL_RE = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNode }) {
@@ -141,6 +163,8 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
     const submit = async () => {
         setApiError("");
         setSubmitting(true);
+        // One id for the pixel and the server event, so Meta counts one lead.
+        const eventId = newEventId();
         try {
             const res = await fetch("/api/send", {
                 method: "POST",
@@ -164,6 +188,9 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
                     interacted: interactedRef.current,
                     _ts: String(tsRef.current),
                     _nonce: nonceRef.current,
+                    eventId,
+                    fbp: readCookie("_fbp"),
+                    fbc: metaClickId(),
                 }),
             });
             let data: { ok?: boolean; error?: string } | null = null;
@@ -171,6 +198,8 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
             if (!res.ok || data?.ok === false) {
                 setApiError(data?.error || `That didn't send. Please call us at ${PHONE_DISPLAY}.`);
             } else {
+                const fbq = (window as unknown as { fbq?: Fbq }).fbq;
+                fbq?.("track", "Lead", { content_name: "Estimate request" }, { eventID: eventId });
                 setSubmitted(true);
             }
         } catch {

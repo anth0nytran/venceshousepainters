@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
 import { pushToGhl } from "./_ghl";
+import { sendMetaLead } from "./_meta";
 import { assess, verifyTurnstile } from "./_spam";
 import { SERVICES, SITUATIONS, TIMELINES, byValue } from "../src/lib/estimate";
 import { BRAND_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_URL } from "../src/lib/site";
@@ -276,6 +277,28 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     } catch (error) {
         console.error("Unhandled exception:", error);
         return res.status(500).json({ ok: false, error: "Failed to send. Please try again." });
+    }
+
+    // ---- Meta Conversions API (server copy of the pixel's Lead) ----
+    try {
+        const nameParts = fullName.split(/\s+/);
+        const ua = req.headers["user-agent"];
+        await sendMetaLead({
+            eventId: norm(data.eventId).slice(0, 100),
+            email,
+            phoneDigits,
+            firstName: nameParts[0] || "",
+            lastName: nameParts.slice(1).join(" "),
+            zip: (address.match(/(\d{5})(?:-\d{4})?\s*$/) || address.match(/\b(\d{5})\b/) || [])[1] || "",
+            ip,
+            userAgent: Array.isArray(ua) ? ua[0] : ua || "",
+            fbp: norm(data.fbp).slice(0, 200),
+            fbc: norm(data.fbc).slice(0, 300),
+            sourceUrl,
+            service: service.ghl,
+        });
+    } catch (err) {
+        console.error("Meta CAPI failed (non-blocking):", err);
     }
 
     // ---- Push into GoHighLevel ----
