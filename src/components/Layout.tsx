@@ -11,16 +11,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
     return (
         <div className="flex min-h-screen flex-col">
-            <header className="border-b border-line bg-paper/95">
-                <div className="wrap flex items-center justify-between gap-4 py-4">
-                    <Link to="/" className="flex items-center gap-3" aria-label={`${LEGAL_NAME} home`}>
-                        <span className="flex h-9 w-9 items-center justify-center rounded-md bg-ink font-display text-lg text-paper">V</span>
-                        <span className="leading-tight">
-                            <span className="block font-display text-[19px]">Vences House Painters</span>
-                            <span className="block text-[12px] text-slate">Houston, Texas</span>
-                        </span>
+            <header className="bg-ink text-white">
+                <div className="wrap flex h-[64px] items-center justify-between gap-4 sm:h-[72px]">
+                    <Link to="/" className="flex items-center gap-2.5" aria-label={`${LEGAL_NAME} home`}>
+                        <span className="flex h-9 w-9 items-center justify-center rounded-md bg-brand text-lg font-black text-white">V</span>
+                        <span className="text-[15px] font-bold uppercase tracking-wide sm:text-[17px]">Vences House Painters</span>
                     </Link>
-                    <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 text-[14px] font-semibold text-ink hover:text-brand">
+                    <a href={`tel:${PHONE_TEL}`} className="inline-flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-[14px] font-semibold text-white hover:bg-brand-dark">
                         <Phone className="h-4 w-4" aria-hidden="true" />
                         <span className="hidden sm:inline">{PHONE_DISPLAY}</span>
                         <span className="sm:hidden">Call</span>
@@ -30,7 +27,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <main className="flex-1">{children}</main>
 
-            <footer className="border-t border-line bg-white">
+            <footer className="border-t border-line bg-[#F5F6F8]">
                 <div className="wrap grid gap-6 py-10 text-[14px] text-slate sm:grid-cols-2">
                     <div>
                         <p className="font-semibold text-ink">{LEGAL_NAME}</p>

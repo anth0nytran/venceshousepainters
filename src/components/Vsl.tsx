@@ -1,39 +1,43 @@
+import { useState } from "react";
+import { Play } from "lucide-react";
 import { VSL_POSTER, VSL_SRC } from "@/lib/site";
-import { VSL_CAPTION } from "@/lib/landing";
 
 /**
- * Vertical (9:16) video sales letter, shot on the phone the same way the
- * ads are. Until VSL_SRC is set it shows the poster photo on its own, so
- * there is never a dead "video coming soon" box on the page.
+ * The big picture under the headline. It's the team shot today; once
+ * VSL_SRC is set it becomes the video's poster with a play button, and
+ * the video loads only when someone presses play.
  */
 export default function Vsl({ className = "" }: { className?: string }) {
+    const [playing, setPlaying] = useState(false);
+
     return (
-        <figure className={className}>
-            <div className="relative mx-auto aspect-[9/16] w-full max-w-[250px] sm:max-w-[300px] lg:max-w-[340px] overflow-hidden rounded-2xl bg-ink shadow-xl ring-1 ring-black/5">
-                {VSL_SRC ? (
-                    <video
-                        className="h-full w-full object-cover"
-                        src={VSL_SRC}
-                        poster={VSL_POSTER}
-                        controls
-                        playsInline
-                        preload="none"
-                        aria-label={VSL_CAPTION}
-                    />
-                ) : (
+        <div className={`relative aspect-video w-full overflow-hidden rounded-xl bg-ink ${className}`}>
+            {VSL_SRC && playing ? (
+                <video className="h-full w-full object-cover" src={VSL_SRC} poster={VSL_POSTER} controls autoPlay playsInline />
+            ) : (
+                <>
                     <img
                         src={VSL_POSTER}
-                        alt="Jay Vences, owner of Vences House Painters, at a home in the Houston area"
+                        srcSet="/img/team-800.webp 800w, /img/team.webp 1600w"
+                        sizes="(min-width: 720px) 680px, 100vw"
+                        alt="The Vences House Painters crew in their blue shirts inside a home they are painting"
                         className="h-full w-full object-cover"
-                        width={900}
-                        height={1600}
+                        width={1600}
+                        height={900}
                         fetchPriority="high"
                     />
-                )}
-            </div>
-            <figcaption className="mt-3 text-center text-[13px] text-slate">
-                {VSL_SRC ? VSL_CAPTION : "Jay Vences, owner. He walks every job himself."}
-            </figcaption>
-        </figure>
+                    {VSL_SRC && (
+                        <button
+                            type="button"
+                            onClick={() => setPlaying(true)}
+                            aria-label="Play video"
+                            className="absolute inset-0 m-auto flex h-20 w-20 items-center justify-center rounded-full bg-black/85 text-white transition-transform hover:scale-105"
+                        >
+                            <Play className="ml-1 h-9 w-9 fill-current" aria-hidden="true" />
+                        </button>
+                    )}
+                </>
+            )}
+        </div>
     );
 }

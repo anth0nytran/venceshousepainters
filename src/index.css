@@ -4,8 +4,8 @@
 
 /* ============================================================
    VENCES HOUSE PAINTERS — estimate + policy pages.
-   Warm white page, near-black ink, one deep-blue accent.
-   Headlines: DM Serif Display. Body/UI: Inter.
+   Matched to acquisition.com/roadmap: Poppins throughout,
+   bold navy headlines, grey fields, yellow pill CTA.
    ============================================================ */
 
 @layer base {
@@ -16,15 +16,11 @@
   }
   body {
     @apply bg-paper text-ink font-sans;
-    line-height: 1.6;
+    line-height: 1.5;
   }
-  h1, h2, h3 {
-    @apply font-display;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-  }
+  h1, h2, h3 { font-weight: 700; }
   :focus-visible {
-    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-paper;
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-white;
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -34,13 +30,21 @@
 
 @layer components {
   .wrap { @apply mx-auto w-full max-w-5xl px-4 sm:px-6; }
-  .eyebrow { @apply text-[12px] font-semibold uppercase tracking-[0.14em] text-brand; }
+  .eyebrow { @apply text-[13px] font-semibold text-brand; }
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-md px-5 py-3 text-[15px] font-semibold transition-colors;
   }
-  .btn-primary { @apply bg-ink text-paper hover:bg-brand-dark; }
-  .input {
-    @apply w-full rounded-md border border-line bg-white px-4 py-3 text-base text-ink placeholder:text-slate/50 transition-colors focus:border-brand focus:outline-none;
+  .btn-primary { @apply bg-ink text-white hover:bg-brand-dark; }
+  /* The roadmap pill: yellow, black 900 caps, 70px tall. */
+  .btn-cta {
+    @apply mx-auto flex h-[70px] w-full max-w-[408px] items-center justify-center rounded-full bg-cta px-4 text-[18px] font-black uppercase text-black transition-colors hover:bg-cta-dark disabled:cursor-not-allowed disabled:opacity-60 sm:text-[20px];
   }
-  .input-error { @apply border-red-500; }
+  /* The roadmap field: 55px, #EFEFEF, 1px #9A9A9A, 8px radius, 18px/500. */
+  .field {
+    @apply h-[55px] w-full rounded-lg border border-fieldline bg-field px-[13px] text-[18px] font-medium text-ink transition-colors placeholder:uppercase placeholder:text-fieldline focus:border-brand focus:bg-white focus:outline-none;
+  }
+  .field-error { @apply border-red-500 bg-red-50; }
+  .input {
+    @apply w-full rounded-lg border border-fieldline bg-field px-4 py-3 text-base text-ink focus:border-brand focus:outline-none;
+  }
 }

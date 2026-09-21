@@ -39,10 +39,11 @@ export const CONSENT_TEXT =
     `I consent to receive non-marketing text messages from ${LEGAL_NAME}. Message frequency may vary (approximately 2-6 messages per month) and may include estimate follow-ups, appointment reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests. Message & data rates may apply. Text HELP for assistance. You may reply STOP to unsubscribe at any time. Consent is not a condition of purchase. Your information will not be shared with third parties.`;
 
 /**
- * Video sales letter. Drop the finished vertical (9:16) edit into
+ * Video sales letter. Drop the finished horizontal (16:9) edit into
  * public/vsl.mp4 and set VSL_SRC to "/vsl.mp4". While it's empty the
- * hero shows the poster photo instead of a player, so the page never
- * looks unfinished to a visitor or an A2P reviewer.
+ * headline picture (the team shot) shows on its own, so the page never
+ * looks unfinished to a visitor or an A2P reviewer. Once the video is
+ * set, the same picture becomes its poster with a play button.
  */
 export const VSL_SRC = "";
-export const VSL_POSTER = "/img/jay-home.webp";
+export const VSL_POSTER = "/img/team.webp";

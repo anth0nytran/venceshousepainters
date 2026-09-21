@@ -1,8 +1,8 @@
 # VSL Script — "Three Prices, You Pick"
 
 **For:** estimate.venceshousepainterstx.com hero video
-**Format:** vertical 9:16, 60–90 seconds, Jay on camera + voice over B-roll
-**Export:** H.264 MP4, 1080×1920, under ~25 MB → `public/vsl.mp4`, then set `VSL_SRC = "/vsl.mp4"` in `src/lib/site.ts`
+**Format:** horizontal 16:9 (it plays in the big picture slot under the headline), 60–90 seconds, Jay on camera + voice over B-roll
+**Export:** H.264 MP4, 1920×1080, under ~25 MB → `public/vsl.mp4`, then set `VSL_SRC = "/vsl.mp4"` in `src/lib/site.ts`
 
 Structure follows Hormozi's VSL order: hook → problem → villain → the offer → proof →
 risk reversal → one call to action. Each line is a **separate 5–15 second take** so
@@ -34,13 +34,14 @@ or any number of homes/years that isn't verified. Premium buyers aren't shopping
 - Shoot line 11 **twice**: once pointing down (mobile, button under the video) and once
   neutral (desktop, button to the left).
 - Burn in captions. Most people watch muted until they decide to tap.
-- Keep the first frame strong. The poster image is `public/img/jay-home.webp`; if the
-  video's first frame is weaker, the poster still shows until they press play.
+- The poster is the team shot (`public/img/team.webp`). It shows until they press play,
+  so the first frame of the video can be anything.
+- The Sep 11 footage is vertical. Shoot the talking-head lines horizontally next time,
+  or place the vertical B-roll inside a 16:9 frame in the edit.
 - Line 4 is the one that sells premium buyers. Don't cut it for time.
 
 ## Where each line maps on the page
 
 The page repeats the same argument in text, so the video and the page agree:
-hook/call-out → hero eyebrow + headline, problem/villain → "One number, take it or leave
-it," offer → "The Three-Price Estimate," proof → "How we treat your house," risk reversal →
-"No-pressure promise," CTA → every button on the page.
+the headline promises 3 free prices, the two starred lines under the form say Jay comes
+out himself and uses the same crew and care on all 3, and the CTA is the form itself.

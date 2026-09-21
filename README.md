@@ -1,7 +1,7 @@
 # Vences House Painters — estimate subdomain
 
-`estimate.venceshousepainterstx.com`. Three public pages: the estimate landing page (VSL +
-form), `/privacy-policy` and `/terms`. React + Vite + Tailwind, Resend emails, GoHighLevel
+`estimate.venceshousepainterstx.com`. Three public pages: the estimate landing page (styled
+after acquisition.com/roadmap: headline, team photo / VSL, one-question-at-a-time form), `/privacy-policy` and `/terms`. React + Vite + Tailwind, Resend emails, GoHighLevel
 push. Adapted from the South Coast site.
 
 ## Edit here
@@ -9,7 +9,7 @@ push. Adapted from the South Coast site.
 | What | File |
 |---|---|
 | Business name, phone, email, address, consent text, VSL video | `src/lib/site.ts` |
-| Landing page copy (headline, offer, FAQ, reviews) | `src/lib/landing.ts` |
+| Landing page headline + the two proof lines | `src/lib/landing.ts` |
 | Form questions and their GHL dropdown values | `src/lib/estimate.ts` |
 
 The consent text, policies, footer and API all read from `site.ts`, so the A2P-reviewed
