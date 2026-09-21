@@ -19,7 +19,7 @@ export default function ProofBar() {
                 <Check className="h-4 w-4 text-brand" strokeWidth={3} aria-hidden="true" /> Owner on every job
             </span>
             <span className="hidden items-center gap-1.5 sm:inline-flex">
-                <Check className="h-4 w-4 text-brand" strokeWidth={3} aria-hidden="true" /> Latino-owned, Houston-based
+                <Check className="h-4 w-4 text-brand" strokeWidth={3} aria-hidden="true" /> Houston, TX
             </span>
         </div>
     );
