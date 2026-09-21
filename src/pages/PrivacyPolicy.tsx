@@ -15,7 +15,7 @@ export default function PrivacyPolicy() {
             </Section>
 
             <Section title="Information We Collect">
-                <p>We collect the information you provide directly through our estimate request forms (on this website or on Facebook and Instagram): your name, email address, phone number (optional), project address, details about your project, and any message you send. We also collect limited technical information, such as the page you submitted the form from and how you arrived at our site, to operate and improve the site.</p>
+                <p>We collect the information you provide directly through our estimate request form: your name, email address, phone number (optional), project address, details about your project, and any message you send. We also collect limited technical information, such as the page you submitted the form from and how you arrived at our site, to operate and improve the site.</p>
             </Section>
 
             <Section title="How We Use Your Information">
@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
             <Section title="SMS / Text Messaging">
                 <p><Label>Platform Operator Disclosure:</Label> {BRAND_NAME} ({LEGAL_ENTITY}) uses QuickLaunchWeb as its platform operator for all SMS/text messaging. QuickLaunchWeb is the sole sender of all SMS messages. Phone numbers used for messaging are owned, registered, and operated by QuickLaunchWeb. {BRAND_NAME} does not independently send text messages. QuickLaunchWeb sends all messages on its behalf.</p>
                 <p><Label>Message Types:</Label> All SMS messages sent through our website are service-related, non-marketing messages only. Messages include estimate request confirmations, appointment scheduling and reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests after a completed service. We do not send promotional or marketing text messages.</p>
-                <p><Label>How You Opt In:</Label> You can opt in two ways, both with the same consent wording: (1) the estimate request form on this website, which has an optional phone number field and an SMS consent checkbox that is not pre-checked; or (2) our Facebook or Instagram estimate request forms, which show the same disclosure and ask separately whether you agree to receive text messages. Nothing is pre-selected; you must actively agree. The consent reads:</p>
+                <p><Label>How You Opt In:</Label> The only way to opt in is through the estimate request form on this website. The form includes an optional phone number field and an SMS consent checkbox that is not pre-checked. You must actively check the box to opt in. The checkbox reads:</p>
                 <p className="border-l-2 border-brand/40 pl-4 italic">"{CONSENT_TEXT} Privacy Policy &amp; Terms."</p>
                 <p>Consent is voluntary and is not required to submit the form, to make a purchase, or to receive service. We capture and store proof of opt-in, including the timestamp, the source page URL, your phone number, the checkbox state, and the exact consent text shown.</p>
                 <p><Label>Message Frequency:</Label> Message frequency varies based on your project, approximately 2-6 messages per month.</p>
