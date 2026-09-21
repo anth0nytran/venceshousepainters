@@ -7,7 +7,8 @@ Prepared 21 September 2026 · QuickLaunchWeb
 
 ## Brand: STANDARD (EIN) — registered as JVB CONSTRUCTION LLC
 
-The site states "Vences House Painters is a d/b/a of JVB Construction LLC" in the
+The site states "Vences House Painters is operated by JVB Construction LLC" (the DBA
+is not filed yet, so the site never says "d/b/a") in the
 consent text, both policies and the footer, so the registered legal name appears on the
 site the reviewer opens. Campaign use case: **Low Volume Mixed**.
 
@@ -87,7 +88,7 @@ Contact:                Jairo Vences, Owner
 ## Use Case Description
 
 ```
-JVB Construction LLC, doing business as Vences House Painters, is a residential and commercial painting contractor based in Houston, Texas (77095), serving Cypress, Katy, Spring, The Woodlands, Magnolia, Conroe and the greater Houston area. Services are interior and exterior painting, cabinet refinishing, trim and door painting, and drywall repair. When a homeowner submits the estimate request form at https://estimate.venceshousepainterstx.com, they may opt in to SMS by actively checking an unchecked consent checkbox. The phone number field is optional and SMS consent is not a condition of submitting the form, of purchase, or of receiving service. All messages are non-marketing, service-related messages only: confirmation that an estimate request was received, appointment scheduling and reminders for the on-site estimate and the painting work, project status updates during an active job, missed-call text-backs, after-hours auto-replies, and a single review request after a completed job. No promotional or marketing messages are sent. Message frequency varies, approximately 2-6 messages per month. Customers can reply STOP at any time to opt out and HELP for assistance. Proof of opt-in (timestamp, source page URL, phone number, checkbox state, IP address and the exact consent disclosure displayed) is captured and retained on every submission.
+JVB Construction LLC operates Vences House Painters, a residential and commercial painting contractor based in Houston, Texas (77095), serving Cypress, Katy, Spring, The Woodlands, Magnolia, Conroe and the greater Houston area. Services are interior and exterior painting, cabinet refinishing, trim and door painting, and drywall repair. When a homeowner submits the estimate request form at https://estimate.venceshousepainterstx.com, they may opt in to SMS by actively checking an unchecked consent checkbox. The phone number field is optional and SMS consent is not a condition of submitting the form, of purchase, or of receiving service. All messages are non-marketing, service-related messages only: confirmation that an estimate request was received, appointment scheduling and reminders for the on-site estimate and the painting work, project status updates during an active job, missed-call text-backs, after-hours auto-replies, and a single review request after a completed job. No promotional or marketing messages are sent. Message frequency varies, approximately 2-6 messages per month. Customers can reply STOP at any time to opt out and HELP for assistance. Proof of opt-in (timestamp, source page URL, phone number, checkbox state, IP address and the exact consent disclosure displayed) is captured and retained on every submission.
 ```
 
 ## How do Contacts Opt-in to Messages?

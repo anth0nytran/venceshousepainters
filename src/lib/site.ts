@@ -12,9 +12,10 @@ export const BRAND_NAME = "Vences House Painters";
 
 // The entity on the IRS EIN letter and the A2P brand registration.
 // Reviewers look for this on the site, so it appears in the consent text,
-// both policies and the footer, always tied to the brand as a d/b/a.
+// both policies and the footer. The DBA is NOT filed yet, so never write
+// "d/b/a"; say "operated by" until the filing is approved.
 export const LEGAL_ENTITY = "JVB Construction LLC";
-export const DBA_LINE = `${BRAND_NAME} is a d/b/a of ${LEGAL_ENTITY}`;
+export const DBA_LINE = `${BRAND_NAME} is operated by ${LEGAL_ENTITY}`;
 
 export const OWNER = "Jairo \"Jay\" Vences";
 

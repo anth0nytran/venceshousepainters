@@ -11,7 +11,7 @@ export default function Terms() {
     return (
         <LegalPage title="Terms of Service">
             <Section title="Acceptance of Terms">
-                <p>{BRAND_NAME} is a d/b/a of {LEGAL_ENTITY}. By accessing {DOMAIN} or engaging {BRAND_NAME}, you agree to these Terms of Service and our <Link to={PRIVACY_PATH} className="text-brand hover:underline">Privacy Policy</Link>. If you do not agree, please do not use the site.</p>
+                <p>{BRAND_NAME} is operated by {LEGAL_ENTITY}. By accessing {DOMAIN} or engaging {BRAND_NAME}, you agree to these Terms of Service and our <Link to={PRIVACY_PATH} className="text-brand hover:underline">Privacy Policy</Link>. If you do not agree, please do not use the site.</p>
             </Section>
 
             <Section title="Eligibility & Age Restriction">
@@ -29,8 +29,8 @@ export default function Terms() {
             <Section title="SMS / Text Messaging Terms">
                 <p><Label>Platform Operator:</Label> {BRAND_NAME} ({LEGAL_ENTITY}) uses QuickLaunchWeb as its platform operator for all SMS communications. QuickLaunchWeb sends all text messages on behalf of {BRAND_NAME}. All phone numbers used for messaging are owned and operated by QuickLaunchWeb under a single brand registration.</p>
                 <p><Label>Program Name:</Label> {`${BRAND_NAME} SMS Program (${LEGAL_ENTITY})`}</p>
-                <p><Label>How to Opt In:</Label> Website form only. You opt in by checking the unchecked SMS consent box on our estimate request form. The phone number field is optional, and consent is not required to request an estimate or to buy any service. You must be 18 or older to opt in.</p>
-                <p><Label>Program Description:</Label> When you submit an estimate request on our website and opt in to SMS by checking the consent checkbox, you may receive the following types of service-related, non-marketing text messages:</p>
+                <p><Label>How to Opt In:</Label> You opt in by actively agreeing to receive text messages on our estimate request form, either on this website (by checking the unchecked SMS consent box) or on our Facebook or Instagram estimate forms (by answering yes to the text message consent question). Both show the same disclosure. Consent is not required to request an estimate or to buy any service. You must be 18 or older to opt in.</p>
+                <p><Label>Program Description:</Label> When you submit an estimate request on our website or our Facebook or Instagram forms and opt in to SMS by checking the consent checkbox, you may receive the following types of service-related, non-marketing text messages:</p>
                 <ul className="list-disc space-y-1 pl-5">
                     <li>Estimate request confirmations</li>
                     <li>Appointment scheduling, reminders, and follow-ups</li>

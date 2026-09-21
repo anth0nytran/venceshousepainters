@@ -27,7 +27,7 @@ export function Label({ children }: { children: React.ReactNode }) {
 export function ContactBlock() {
     return (
         <p>
-            {LEGAL_ENTITY} d/b/a {BRAND_NAME}<br />
+            {BRAND_NAME}, operated by {LEGAL_ENTITY}<br />
             {ADDRESS.street}<br />
             {ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}<br />
             Phone: <a href={`tel:${PHONE_TEL}`} className="text-brand hover:underline">{PHONE_DISPLAY}</a><br />

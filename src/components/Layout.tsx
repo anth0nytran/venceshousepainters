@@ -48,7 +48,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         <Link to={TERMS_PATH} className="py-2 hover:text-white">Terms of Service</Link>
                     </nav>
                     <p className="text-[12px] text-white/50 sm:col-span-3">
-                        © {new Date().getFullYear()} {LEGAL_ENTITY} d/b/a {BRAND_NAME}. All rights reserved.
+                        © {new Date().getFullYear()} {BRAND_NAME}, operated by {LEGAL_ENTITY}. All rights reserved.
                     </p>
                 </div>
             </footer>
