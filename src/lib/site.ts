@@ -12,8 +12,8 @@ export const SITE_URL = "https://estimate.venceshousepainterstx.com";
 export const LEGAL_NAME = "Vences House Painters";
 export const OWNER = "Jairo \"Jay\" Vences";
 
-export const PHONE_DISPLAY = "(832) 948-8629";
-export const PHONE_TEL = "+18329488629";
+export const PHONE_DISPLAY = "(832) 979-8127";
+export const PHONE_TEL = "+18329798127";
 export const EMAIL = "jairo_vences@yahoo.com";
 
 export const ADDRESS = {

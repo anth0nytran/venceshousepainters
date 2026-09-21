@@ -52,7 +52,7 @@ from the Solivance submission).
 | 11 | Opt-in proof stored on submit | ✅ timestamp, URL, phone, checkbox, consent text, IP |
 | 12 | No GoHighLevel-branded links | ✅ |
 | 13 | Support email confirmed | ✅ jairo_vences@yahoo.com (confirmed by Anthony 2026-09-21; GHL profile still has the "jario" typo) |
-| 14 | Contact phone | ✅ (832) 948-8629, the GHL number being registered, so calls/texts from this page land in the CRM and are tracked. The Google listing keeps its own number (832) 789-6922 for organic/Google leads; that difference is fine for A2P |
+| 14 | Contact phone | ✅ (832) 979-8127, the GHL/CRM number (the only number in the sub-account) and the one being registered, so calls and texts from this page land in the CRM. The Google listing keeps (832) 789-6922 for Google leads; that difference is fine for A2P |
 | 15 | Services clearly described on the site | ✅ footer services line + Terms "Our Services" |
 | 16 | CTIA third-party statement (the JN 30896 fix) | ✅ verbatim in Privacy Policy |
 | 17 | Opt-in method stated as website-form-only | ✅ Privacy + Terms |
@@ -120,7 +120,7 @@ Vences House Painters: You're opted in to receive messages about your estimate, 
 
 **HELP**
 ```
-Vences House Painters: For help call (832) 948-8629 or email jairo_vences@yahoo.com. Msg & data rates may apply. Reply STOP to unsubscribe.
+Vences House Painters: For help call (832) 979-8127 or email jairo_vences@yahoo.com. Msg & data rates may apply. Reply STOP to unsubscribe.
 ```
 **STOP**
 ```
