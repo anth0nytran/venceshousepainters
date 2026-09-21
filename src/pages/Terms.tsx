@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { ContactBlock, Label, LegalPage, Section } from "@/components/Legal";
-import { EMAIL, LEGAL_NAME, PRIVACY_PATH, SITE_URL } from "@/lib/site";
+import { EMAIL, BRAND_NAME, LEGAL_ENTITY, PRIVACY_PATH, SITE_URL } from "@/lib/site";
 import { usePageTitle } from "@/lib/usePageTitle";
 
 const DOMAIN = SITE_URL.replace(/^https?:\/\//, "");
 
 export default function Terms() {
-    usePageTitle(`Terms of Service | ${LEGAL_NAME}`);
+    usePageTitle(`Terms of Service | ${BRAND_NAME}`);
 
     return (
         <LegalPage title="Terms of Service">
             <Section title="Acceptance of Terms">
-                <p>By accessing {DOMAIN} or engaging {LEGAL_NAME}, you agree to these Terms of Service and our <Link to={PRIVACY_PATH} className="text-brand hover:underline">Privacy Policy</Link>. If you do not agree, please do not use the site.</p>
+                <p>{BRAND_NAME} is a d/b/a of {LEGAL_ENTITY}. By accessing {DOMAIN} or engaging {BRAND_NAME}, you agree to these Terms of Service and our <Link to={PRIVACY_PATH} className="text-brand hover:underline">Privacy Policy</Link>. If you do not agree, please do not use the site.</p>
             </Section>
 
             <Section title="Eligibility & Age Restriction">
@@ -19,7 +19,7 @@ export default function Terms() {
             </Section>
 
             <Section title="Our Services">
-                <p>{LEGAL_NAME} provides residential and commercial painting services in the Houston, Texas area, including interior painting, exterior painting, cabinet refinishing, trim and door painting, and drywall repair. Descriptions on this site are general information and do not constitute a binding offer.</p>
+                <p>{BRAND_NAME} provides residential and commercial painting services in the Houston, Texas area, including interior painting, exterior painting, cabinet refinishing, trim and door painting, and drywall repair. Descriptions on this site are general information and do not constitute a binding offer.</p>
             </Section>
 
             <Section title="Estimates">
@@ -27,8 +27,8 @@ export default function Terms() {
             </Section>
 
             <Section title="SMS / Text Messaging Terms">
-                <p><Label>Platform Operator:</Label> {LEGAL_NAME} uses QuickLaunchWeb as its platform operator for all SMS communications. QuickLaunchWeb sends all text messages on behalf of {LEGAL_NAME}. All phone numbers used for messaging are owned and operated by QuickLaunchWeb under a single brand registration.</p>
-                <p><Label>Program Name:</Label> {`${LEGAL_NAME} SMS Program`}</p>
+                <p><Label>Platform Operator:</Label> {BRAND_NAME} ({LEGAL_ENTITY}) uses QuickLaunchWeb as its platform operator for all SMS communications. QuickLaunchWeb sends all text messages on behalf of {BRAND_NAME}. All phone numbers used for messaging are owned and operated by QuickLaunchWeb under a single brand registration.</p>
+                <p><Label>Program Name:</Label> {`${BRAND_NAME} SMS Program (${LEGAL_ENTITY})`}</p>
                 <p><Label>How to Opt In:</Label> Website form only. You opt in by checking the unchecked SMS consent box on our estimate request form. The phone number field is optional, and consent is not required to request an estimate or to buy any service. You must be 18 or older to opt in.</p>
                 <p><Label>Program Description:</Label> When you submit an estimate request on our website and opt in to SMS by checking the consent checkbox, you may receive the following types of service-related, non-marketing text messages:</p>
                 <ul className="list-disc space-y-1 pl-5">
@@ -48,11 +48,11 @@ export default function Terms() {
             </Section>
 
             <Section title="Use of the Website">
-                <p>You agree to use the site lawfully and not to interfere with its operation or attempt unauthorized access. All content and branding on this site belong to {LEGAL_NAME} or its licensors and may not be reproduced without permission.</p>
+                <p>You agree to use the site lawfully and not to interfere with its operation or attempt unauthorized access. All content and branding on this site belong to {BRAND_NAME} or its licensors and may not be reproduced without permission.</p>
             </Section>
 
             <Section title="Disclaimers & Limitation of Liability">
-                <p>The site is provided "as is" without warranties of any kind. To the fullest extent permitted by law, {LEGAL_NAME} is not liable for indirect or incidental damages arising from your use of the site. Nothing here limits the warranties or obligations stated in a signed project agreement.</p>
+                <p>The site is provided "as is" without warranties of any kind. To the fullest extent permitted by law, {BRAND_NAME} is not liable for indirect or incidental damages arising from your use of the site. Nothing here limits the warranties or obligations stated in a signed project agreement.</p>
             </Section>
 
             <Section title="Governing Law">

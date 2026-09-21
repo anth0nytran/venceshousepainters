@@ -4,7 +4,7 @@ import GoogleReviews from "@/components/GoogleReviews";
 import ProofBar from "@/components/ProofBar";
 import Vsl from "@/components/Vsl";
 import { HEADLINE, PROOF } from "@/lib/landing";
-import { LEGAL_NAME } from "@/lib/site";
+import { BRAND_NAME } from "@/lib/site";
 import { usePageTitle } from "@/lib/usePageTitle";
 
 // Layout follows acquisition.com/roadmap: headline, big picture,
@@ -12,7 +12,7 @@ import { usePageTitle } from "@/lib/usePageTitle";
 // Quiet Google proof sits above the headline; the full reviews
 // widget sits under everything.
 export default function Estimate() {
-    usePageTitle(`Get 3 Free Painting Prices | ${LEGAL_NAME}`);
+    usePageTitle(`Get 3 Free Painting Prices | ${BRAND_NAME}`);
 
     return (
         <>

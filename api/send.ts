@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import { pushToGhl } from "./_ghl";
 import { assess, verifyTurnstile } from "./_spam";
 import { SERVICES, SITUATIONS, TIMELINES, byValue } from "../src/lib/estimate";
-import { LEGAL_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_URL } from "../src/lib/site";
+import { BRAND_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_URL } from "../src/lib/site";
 
 export const config = { runtime: "nodejs" };
 
@@ -157,7 +157,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;margin:0 auto;background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;">
     <tr><td style="border-top:6px solid #1B1F24;padding:18px 20px;border-bottom:1px solid #f1f5f9;">
       <table role="presentation" width="100%"><tr>
-        <td style="font-size:16px;font-weight:700;color:#1B1F24;">${esc(LEGAL_NAME)}</td>
+        <td style="font-size:16px;font-weight:700;color:#1B1F24;">${esc(BRAND_NAME)}</td>
         <td align="right"><span style="background:${ACCENT};color:#fff;font-weight:700;font-size:12px;padding:6px 10px;border-radius:999px;">NEW ESTIMATE REQUEST</span></td>
       </tr></table>
     </td></tr>
@@ -219,13 +219,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 <div style="background:#f3f4f6;margin:0;padding:24px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#111827;">
   <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="max-width:600px;margin:0 auto;background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;">
     <tr><td style="border-top:6px solid #1B1F24;padding:24px 24px 0;text-align:center;">
-      <div style="font-size:18px;font-weight:800;letter-spacing:0.5px;color:#1B1F24;">${esc(LEGAL_NAME.toUpperCase())}</div>
+      <div style="font-size:18px;font-weight:800;letter-spacing:0.5px;color:#1B1F24;">${esc(BRAND_NAME.toUpperCase())}</div>
       <div style="font-size:11px;color:${ACCENT};letter-spacing:2px;text-transform:uppercase;margin-top:4px;">Houston, Texas</div>
     </td></tr>
     <tr><td style="padding:28px 24px;">
       <div style="font-size:22px;font-weight:800;margin:0 0 16px;color:#1B1F24;">Hi ${esc(firstName)},</div>
       <p style="font-size:15px;color:#374151;line-height:1.7;margin:0 0 16px;">
-        Thank you for reaching out to ${esc(LEGAL_NAME)}. We received your estimate request, and Jay will get back to you within one business day to set up a time to see the project.
+        Thank you for reaching out to ${esc(BRAND_NAME)}. We received your estimate request, and Jay will get back to you within one business day to set up a time to see the project.
       </p>
       <table role="presentation" width="100%" style="border:1px solid #e5e7eb;border-radius:10px;overflow:hidden;font-size:14px;margin-bottom:24px;">
         <tr><td style="background:#f9fafb;padding:12px 16px;font-weight:700;border-bottom:1px solid #e5e7eb;">Your Request</td></tr>
@@ -239,7 +239,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         Need to reach us sooner? Call <a href="tel:${PHONE_TEL}" style="color:${ACCENT};font-weight:700;text-decoration:none;">${PHONE_DISPLAY}</a>.
       </p>
       <div style="border-top:1px solid #e5e7eb;padding-top:20px;text-align:center;font-size:12px;color:#6b7280;">
-        ${esc(LEGAL_NAME)} · Houston, Texas
+        ${esc(BRAND_NAME)} · Houston, Texas
       </div>
     </td></tr>
   </table>
@@ -266,12 +266,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
 
         await resend.emails.send({
-            from: `${LEGAL_NAME} <leads@quicklaunchweb.us>`,
+            from: `${BRAND_NAME} <leads@quicklaunchweb.us>`,
             to: [email],
             replyTo: toEmail,
             subject: `We received your estimate request, ${firstName}`,
             html: prospectHtml,
-            text: `Hi ${firstName},\n\nThank you for reaching out to ${LEGAL_NAME}. We received your estimate request for ${serviceLabel}, and Jay will get back to you within one business day to set up a time to see the project.\n\nNeed to reach us sooner? Call ${PHONE_DISPLAY}.\n\n${LEGAL_NAME} · Houston, Texas`,
+            text: `Hi ${firstName},\n\nThank you for reaching out to ${BRAND_NAME}. We received your estimate request for ${serviceLabel}, and Jay will get back to you within one business day to set up a time to see the project.\n\nNeed to reach us sooner? Call ${PHONE_DISPLAY}.\n\n${BRAND_NAME} · Houston, Texas`,
         }).catch((err) => console.error("Prospect email failed (non-blocking):", err));
     } catch (error) {
         console.error("Unhandled exception:", error);

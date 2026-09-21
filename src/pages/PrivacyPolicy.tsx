@@ -1,17 +1,17 @@
 import { Link } from "react-router-dom";
 import { ContactBlock, Label, LegalPage, Section } from "@/components/Legal";
-import { CONSENT_TEXT, EMAIL, LEGAL_NAME, SITE_URL, TERMS_PATH } from "@/lib/site";
+import { CONSENT_TEXT, EMAIL, BRAND_NAME, LEGAL_ENTITY, SITE_URL, TERMS_PATH } from "@/lib/site";
 import { usePageTitle } from "@/lib/usePageTitle";
 
 const DOMAIN = SITE_URL.replace(/^https?:\/\//, "");
 
 export default function PrivacyPolicy() {
-    usePageTitle(`Privacy Policy | ${LEGAL_NAME}`);
+    usePageTitle(`Privacy Policy | ${BRAND_NAME}`);
 
     return (
         <LegalPage title="Privacy Policy">
             <Section title="Overview">
-                <p>{LEGAL_NAME} ("we," "us," or "our") respects your privacy. This policy explains what information we collect through {DOMAIN}, how we use it, and the choices you have. By using this website or contacting us, you agree to this policy.</p>
+                <p>{BRAND_NAME}, a d/b/a of {LEGAL_ENTITY} ("we," "us," or "our"), respects your privacy. This policy explains what information we collect through {DOMAIN}, how we use it, and the choices you have. By using this website or contacting us, you agree to this policy.</p>
             </Section>
 
             <Section title="Information We Collect">
@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
             </Section>
 
             <Section title="SMS / Text Messaging">
-                <p><Label>Platform Operator Disclosure:</Label> {LEGAL_NAME} uses QuickLaunchWeb as its platform operator for all SMS/text messaging. QuickLaunchWeb is the sole sender of all SMS messages. Phone numbers used for messaging are owned, registered, and operated by QuickLaunchWeb. {LEGAL_NAME} does not independently send text messages. QuickLaunchWeb sends all messages on its behalf.</p>
+                <p><Label>Platform Operator Disclosure:</Label> {BRAND_NAME} ({LEGAL_ENTITY}) uses QuickLaunchWeb as its platform operator for all SMS/text messaging. QuickLaunchWeb is the sole sender of all SMS messages. Phone numbers used for messaging are owned, registered, and operated by QuickLaunchWeb. {BRAND_NAME} does not independently send text messages. QuickLaunchWeb sends all messages on its behalf.</p>
                 <p><Label>Message Types:</Label> All SMS messages sent through our website are service-related, non-marketing messages only. Messages include estimate request confirmations, appointment scheduling and reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests after a completed service. We do not send promotional or marketing text messages.</p>
                 <p><Label>How You Opt In:</Label> The only way to opt in is through the estimate request form on this website. The form includes an optional phone number field and an SMS consent checkbox that is not pre-checked. You must actively check the box to opt in. The checkbox reads:</p>
                 <p className="border-l-2 border-brand/40 pl-4 italic">"{CONSENT_TEXT} Privacy Policy &amp; Terms."</p>

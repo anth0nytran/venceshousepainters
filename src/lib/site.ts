@@ -7,9 +7,15 @@
 
 export const SITE_URL = "https://estimate.venceshousepainterstx.com";
 
-// No LLC / Inc / Company here unless it is on the registration.
-// A corporate identifier that doesn't match the A2P brand is a rejection.
-export const LEGAL_NAME = "Vences House Painters";
+// The trading name customers see everywhere on the site.
+export const BRAND_NAME = "Vences House Painters";
+
+// The entity on the IRS EIN letter and the A2P brand registration.
+// Reviewers look for this on the site, so it appears in the consent text,
+// both policies and the footer, always tied to the brand as a d/b/a.
+export const LEGAL_ENTITY = "JVB Construction LLC";
+export const DBA_LINE = `${BRAND_NAME} is a d/b/a of ${LEGAL_ENTITY}`;
+
 export const OWNER = "Jairo \"Jay\" Vences";
 
 export const PHONE_DISPLAY = "(832) 979-8127";
@@ -40,7 +46,7 @@ export const POLICY_EFFECTIVE = "September 21, 2026";
  * for word in the Privacy Policy. Non-marketing only: no promotional texts.
  */
 export const CONSENT_TEXT =
-    `I consent to receive non-marketing text messages from ${LEGAL_NAME}. Message frequency may vary (approximately 2-6 messages per month) and may include estimate follow-ups, appointment reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests. Message & data rates may apply. Text HELP for assistance. You may reply STOP to unsubscribe at any time. Consent is not a condition of purchase. Your information will not be shared with third parties.`;
+    `I consent to receive non-marketing text messages from ${BRAND_NAME} (${LEGAL_ENTITY}). Message frequency may vary (approximately 2-6 messages per month) and may include estimate follow-ups, appointment reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests. Message & data rates may apply. Text HELP for assistance. You may reply STOP to unsubscribe at any time. Consent is not a condition of purchase. Your information will not be shared with third parties.`;
 
 /**
  * Video sales letter. Drop the finished horizontal (16:9) edit into

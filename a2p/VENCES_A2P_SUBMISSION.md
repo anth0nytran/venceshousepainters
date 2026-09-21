@@ -5,7 +5,13 @@ Prepared 21 September 2026 · QuickLaunchWeb
 
 ---
 
-## ⚠️ Decide the brand lane before submitting
+## Brand: STANDARD (EIN) — registered as JVB CONSTRUCTION LLC
+
+The site states "Vences House Painters is a d/b/a of JVB Construction LLC" in the
+consent text, both policies and the footer, so the registered legal name appears on the
+site the reviewer opens. Campaign use case: **Low Volume Mixed**.
+
+## (Reference) Brand lanes
 
 | If Jay has… | Lane | Legal name field |
 |---|---|---|
@@ -65,7 +71,8 @@ from the Solivance submission).
 ## Business Information
 
 ```
-Legal / Business Name:  Vences House Painters        (see lane table above)
+Legal / Business Name:  JVB CONSTRUCTION LLC         (as on the IRS EIN letter)
+DBA / Brand:            Vences House Painters
 Website:                https://estimate.venceshousepainterstx.com
 Industry:               CONSTRUCTION
 Vertical:               Home Services — Residential & Commercial Painting
@@ -80,13 +87,13 @@ Contact:                Jairo Vences, Owner
 ## Use Case Description
 
 ```
-Vences House Painters is a residential and commercial painting contractor based in Houston, Texas (77095), serving Cypress, Katy, Spring, The Woodlands, Magnolia, Conroe and the greater Houston area. Services are interior and exterior painting, cabinet refinishing, trim and door painting, and drywall repair. When a homeowner submits the estimate request form at https://estimate.venceshousepainterstx.com, they may opt in to SMS by actively checking an unchecked consent checkbox. The phone number field is optional and SMS consent is not a condition of submitting the form, of purchase, or of receiving service. All messages are non-marketing, service-related messages only: confirmation that an estimate request was received, appointment scheduling and reminders for the on-site estimate and the painting work, project status updates during an active job, missed-call text-backs, after-hours auto-replies, and a single review request after a completed job. No promotional or marketing messages are sent. Message frequency varies, approximately 2-6 messages per month. Customers can reply STOP at any time to opt out and HELP for assistance. Proof of opt-in (timestamp, source page URL, phone number, checkbox state, IP address and the exact consent disclosure displayed) is captured and retained on every submission.
+JVB Construction LLC, doing business as Vences House Painters, is a residential and commercial painting contractor based in Houston, Texas (77095), serving Cypress, Katy, Spring, The Woodlands, Magnolia, Conroe and the greater Houston area. Services are interior and exterior painting, cabinet refinishing, trim and door painting, and drywall repair. When a homeowner submits the estimate request form at https://estimate.venceshousepainterstx.com, they may opt in to SMS by actively checking an unchecked consent checkbox. The phone number field is optional and SMS consent is not a condition of submitting the form, of purchase, or of receiving service. All messages are non-marketing, service-related messages only: confirmation that an estimate request was received, appointment scheduling and reminders for the on-site estimate and the painting work, project status updates during an active job, missed-call text-backs, after-hours auto-replies, and a single review request after a completed job. No promotional or marketing messages are sent. Message frequency varies, approximately 2-6 messages per month. Customers can reply STOP at any time to opt out and HELP for assistance. Proof of opt-in (timestamp, source page URL, phone number, checkbox state, IP address and the exact consent disclosure displayed) is captured and retained on every submission.
 ```
 
 ## How do Contacts Opt-in to Messages?
 
 ```
-Contacts opt in by submitting the estimate request form at https://estimate.venceshousepainterstx.com. The SMS consent checkbox and its full disclosure are displayed inside the form card on every step, directly under the button (and above the submit button on the final step), so they are visible on arrival. The phone number field is optional and has no required attribute or asterisk. The SMS consent checkbox is NOT pre-checked; the user must actively check it. Consent is voluntary and is not required to submit the form or to receive service. A separate, required, unchecked "I am 18 or older. (Required)" checkbox appears directly above it. The disclosure reads exactly: "I consent to receive non-marketing text messages from Vences House Painters. Message frequency may vary (approximately 2-6 messages per month) and may include estimate follow-ups, appointment reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests. Message & data rates may apply. Text HELP for assistance. You may reply STOP to unsubscribe at any time. Consent is not a condition of purchase. Your information will not be shared with third parties. Privacy Policy & Terms." The words "Privacy Policy" (https://estimate.venceshousepainterstx.com/privacy-policy) and "Terms" (https://estimate.venceshousepainterstx.com/terms) are clickable links inside the checkbox label, and both pages are also linked in the site footer. Proof of opt-in is captured on every submission: timestamp, source page URL, phone number, checkbox state, IP address and the exact consent text displayed. No mobile opt-in data or SMS consent data is shared, sold, rented or transferred to third parties or affiliates for marketing or promotional purposes.
+Contacts opt in by submitting the estimate request form at https://estimate.venceshousepainterstx.com. The SMS consent checkbox and its full disclosure are displayed inside the form card on every step, directly under the button (and above the submit button on the final step), so they are visible on arrival. The phone number field is optional and has no required attribute or asterisk. The SMS consent checkbox is NOT pre-checked; the user must actively check it. Consent is voluntary and is not required to submit the form or to receive service. A separate, required, unchecked "I am 18 or older. (Required)" checkbox appears directly above it. The disclosure reads exactly: "I consent to receive non-marketing text messages from Vences House Painters (JVB Construction LLC). Message frequency may vary (approximately 2-6 messages per month) and may include estimate follow-ups, appointment reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests. Message & data rates may apply. Text HELP for assistance. You may reply STOP to unsubscribe at any time. Consent is not a condition of purchase. Your information will not be shared with third parties. Privacy Policy & Terms." The words "Privacy Policy" (https://estimate.venceshousepainterstx.com/privacy-policy) and "Terms" (https://estimate.venceshousepainterstx.com/terms) are clickable links inside the checkbox label, and both pages are also linked in the site footer. Proof of opt-in is captured on every submission: timestamp, source page URL, phone number, checkbox state, IP address and the exact consent text displayed. No mobile opt-in data or SMS consent data is shared, sold, rented or transferred to third parties or affiliates for marketing or promotional purposes.
 ```
 
 ---

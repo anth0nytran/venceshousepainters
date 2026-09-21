@@ -1,4 +1,4 @@
-import { ADDRESS, EMAIL, LEGAL_NAME, PHONE_DISPLAY, PHONE_TEL, POLICY_EFFECTIVE } from "@/lib/site";
+import { ADDRESS, EMAIL, BRAND_NAME, LEGAL_ENTITY, PHONE_DISPLAY, PHONE_TEL, POLICY_EFFECTIVE } from "@/lib/site";
 
 export function LegalPage({ title, children }: { title: string; children: React.ReactNode }) {
     return (
@@ -27,7 +27,7 @@ export function Label({ children }: { children: React.ReactNode }) {
 export function ContactBlock() {
     return (
         <p>
-            {LEGAL_NAME}<br />
+            {LEGAL_ENTITY} d/b/a {BRAND_NAME}<br />
             {ADDRESS.street}<br />
             {ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}<br />
             Phone: <a href={`tel:${PHONE_TEL}`} className="text-brand hover:underline">{PHONE_DISPLAY}</a><br />
