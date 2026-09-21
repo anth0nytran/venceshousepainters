@@ -14,7 +14,7 @@ export const OWNER = "Jairo \"Jay\" Vences";
 
 export const PHONE_DISPLAY = "(832) 948-8629";
 export const PHONE_TEL = "+18329488629";
-export const EMAIL = "jario_vences@yahoo.com";
+export const EMAIL = "jairo_vences@yahoo.com";
 
 export const ADDRESS = {
     street: "9742 Whithorn Dr, Suite A",
