@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Phone } from "lucide-react";
 import {
-    ADDRESS, EMAIL, LEGAL_NAME, PHONE_DISPLAY, PHONE_TEL, PRIVACY_PATH, TERMS_PATH,
+    ADDRESS, EMAIL, LEGAL_NAME, PHONE_DISPLAY, PHONE_TEL, PRIVACY_PATH, SERVICE_AREA, SERVICES_LINE, TERMS_PATH,
 } from "@/lib/site";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -32,18 +32,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <img src="/img/logo-lockup.webp" alt={LEGAL_NAME} width={640} height={586} loading="lazy" className="h-24 w-auto" />
                     <div>
                         <p className="font-semibold text-white">{LEGAL_NAME}</p>
+                        <p className="mb-2 max-w-md text-white/60">{SERVICES_LINE} Serving {SERVICE_AREA}.</p>
                         <p>{ADDRESS.street}</p>
                         <p>{ADDRESS.city}, {ADDRESS.state} {ADDRESS.zip}</p>
                         <p className="mt-2">
-                            <a href={`tel:${PHONE_TEL}`} className="hover:text-white">{PHONE_DISPLAY}</a>
+                            <a href={`tel:${PHONE_TEL}`} className="inline-block py-1.5 hover:text-white">{PHONE_DISPLAY}</a>
                             <span aria-hidden="true"> | </span>
-                            <a href={`mailto:${EMAIL}`} className="hover:text-white">{EMAIL}</a>
+                            <a href={`mailto:${EMAIL}`} className="inline-block break-all py-1.5 hover:text-white">{EMAIL}</a>
                         </p>
                     </div>
-                    <nav aria-label="Legal" className="flex flex-col gap-2 sm:items-end">
-                        <Link to="/" className="hover:text-white">Request an Estimate</Link>
-                        <Link to={PRIVACY_PATH} className="hover:text-white">Privacy Policy</Link>
-                        <Link to={TERMS_PATH} className="hover:text-white">Terms of Service</Link>
+                    <nav aria-label="Legal" className="flex flex-col sm:items-end">
+                        <Link to="/" className="py-2 hover:text-white">Request an Estimate</Link>
+                        <Link to={PRIVACY_PATH} className="py-2 hover:text-white">Privacy Policy</Link>
+                        <Link to={TERMS_PATH} className="py-2 hover:text-white">Terms of Service</Link>
                     </nav>
                     <p className="text-[12px] text-white/50 sm:col-span-3">
                         © {new Date().getFullYear()} {LEGAL_NAME}. All rights reserved.

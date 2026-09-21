@@ -97,12 +97,12 @@ function ReviewCard({ r }: { r: Review }) {
                 {r.text}{r.truncated ? "…" : ""}
             </p>
             {long && (
-                <button type="button" onClick={() => setOpen((o) => !o)} className="mt-1 self-start text-[14px] font-medium text-[#70757a] hover:text-[#202124]">
+                <button type="button" onClick={() => setOpen((o) => !o)} className="-my-1 mt-0 self-start py-2 text-[14px] font-medium text-[#70757a] hover:text-[#202124]">
                     {open ? "Less" : "More"}
                 </button>
             )}
             {r.truncated && (
-                <a href={GOOGLE_PROFILE.url} target="_blank" rel="noopener noreferrer" className="mt-1 self-start text-[14px] font-medium text-[#70757a] hover:text-[#202124]">
+                <a href={GOOGLE_PROFILE.url} target="_blank" rel="noopener noreferrer" className="-my-1 mt-0 self-start py-2 text-[14px] font-medium text-[#70757a] hover:text-[#202124]">
                     More<span className="sr-only"> (opens the full review on Google)</span>
                 </a>
             )}

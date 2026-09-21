@@ -27,7 +27,13 @@ error 30915 for exactly this mismatch.)
 Website / Opt-in Form URL:  https://estimate.venceshousepainterstx.com
 Privacy Policy:             https://estimate.venceshousepainterstx.com/privacy-policy
 Terms:                      https://estimate.venceshousepainterstx.com/terms
+Opt-in Image URL:           https://estimate.venceshousepainterstx.com/a2p/opt-in-form.png
 ```
+
+The opt-in image is a screenshot of the live form on the phone step: optional phone
+field, the unchecked consent box with its full disclosure and policy links, and the
+separate 18+ box. Paste it into GHL's "Opt-in image / proof of consent" field (lesson
+from the Solivance submission).
 
 ## Readiness
 
@@ -46,7 +52,13 @@ Terms:                      https://estimate.venceshousepainterstx.com/terms
 | 11 | Opt-in proof stored on submit | ✅ timestamp, URL, phone, checkbox, consent text, IP |
 | 12 | No GoHighLevel-branded links | ✅ |
 | 13 | Support email confirmed | ⚠️ site uses `jario_vences@yahoo.com` from GHL (note the spelling) — confirm with Jay |
-| 14 | Contact phone confirmed | ⚠️ site uses (832) 948-8629 (GHL number) |
+| 14 | Contact phone matches Google | ⚠️ **site uses (832) 948-8629 (GHL); Google Business Profile lists (832) 789-6922.** Pick one, set `PHONE_*` in `src/lib/site.ts`, redeploy |
+| 15 | Services clearly described on the site | ✅ footer services line + Terms "Our Services" |
+| 16 | CTIA third-party statement (the JN 30896 fix) | ✅ verbatim in Privacy Policy |
+| 17 | Opt-in method stated as website-form-only | ✅ Privacy + Terms |
+| 18 | Phone field points to the consent box | ✅ "Want text updates? Check the text message box below the form. It's optional." |
+| 19 | Policy URLs serve their own static HTML (no JS needed) | ✅ explicit Vercel rewrites to `/privacy-policy/index.html` and `/terms/index.html` |
+| 20 | Opt-in screenshot hosted | ✅ `/a2p/opt-in-form.png` |
 
 ---
 
@@ -75,6 +87,14 @@ Vences House Painters is a residential and commercial painting contractor based 
 
 ```
 Contacts opt in by submitting the estimate request form at https://estimate.venceshousepainterstx.com. The SMS consent checkbox and its full disclosure are displayed directly below the form card, visible on arrival and on every step of the form. The phone number field is optional and has no required attribute or asterisk. The SMS consent checkbox is NOT pre-checked; the user must actively check it. Consent is voluntary and is not required to submit the form or to receive service. A separate, required, unchecked "I am 18 or older. (Required)" checkbox appears directly below it. The disclosure reads exactly: "I consent to receive non-marketing text messages from Vences House Painters. Message frequency may vary (approximately 2-6 messages per month) and may include estimate follow-ups, appointment reminders, project updates, missed call text-backs, after-hours auto-replies, and one-time review requests. Message & data rates may apply. Text HELP for assistance. You may reply STOP to unsubscribe at any time. Consent is not a condition of purchase. Your information will not be shared with third parties. Privacy Policy & Terms." The words "Privacy Policy" (https://estimate.venceshousepainterstx.com/privacy-policy) and "Terms" (https://estimate.venceshousepainterstx.com/terms) are clickable links inside the checkbox label, and both pages are also linked in the site footer. Proof of opt-in is captured on every submission: timestamp, source page URL, phone number, checkbox state, IP address and the exact consent text displayed. No mobile opt-in data or SMS consent data is shared, sold, rented or transferred to third parties or affiliates for marketing or promotional purposes.
+```
+
+---
+
+## Privacy / Third-Party Statement (paste if GHL asks)
+
+```
+No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. Information sharing to subcontractors in support services, such as customer service, is permitted. All other use case categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties, excluding aggregators and providers of the Text Message services.
 ```
 
 ---

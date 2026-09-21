@@ -2,7 +2,7 @@ import { ADDRESS, EMAIL, LEGAL_NAME, PHONE_DISPLAY, PHONE_TEL, POLICY_EFFECTIVE 
 
 export function LegalPage({ title, children }: { title: string; children: React.ReactNode }) {
     return (
-        <article className="wrap max-w-3xl py-12 sm:py-16">
+        <article className="wrap max-w-3xl break-words py-12 sm:py-16">
             <p className="eyebrow mb-3">Legal</p>
             <h1 className="mb-2 text-4xl sm:text-5xl">{title}</h1>
             <p className="mb-10 text-[14px] text-slate">Effective {POLICY_EFFECTIVE}</p>

@@ -28,7 +28,8 @@ export default function Terms() {
 
             <Section title="SMS / Text Messaging Terms">
                 <p><Label>Platform Operator:</Label> {LEGAL_NAME} uses QuickLaunchWeb as its platform operator for all SMS communications. QuickLaunchWeb sends all text messages on behalf of {LEGAL_NAME}. All phone numbers used for messaging are owned and operated by QuickLaunchWeb under a single brand registration.</p>
-                <p><Label>Program Name:</Label> {LEGAL_NAME} SMS Program</p>
+                <p><Label>Program Name:</Label> {`${LEGAL_NAME} SMS Program`}</p>
+                <p><Label>How to Opt In:</Label> Website form only. You opt in by checking the unchecked SMS consent box on our estimate request form. The phone number field is optional, and consent is not required to request an estimate or to buy any service. You must be 18 or older to opt in.</p>
                 <p><Label>Program Description:</Label> When you submit an estimate request on our website and opt in to SMS by checking the consent checkbox, you may receive the following types of service-related, non-marketing text messages:</p>
                 <ul className="list-disc space-y-1 pl-5">
                     <li>Estimate request confirmations</li>

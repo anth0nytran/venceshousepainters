@@ -18,7 +18,7 @@ export default function Estimate() {
         <>
         <section className="px-4 pb-14 pt-6 text-center sm:pt-8">
             <ProofBar />
-            <h1 className="mx-auto max-w-[1170px] text-balance text-[32px] leading-[1.15] text-black sm:text-[44px] lg:text-[53px]">
+            <h1 className="mx-auto max-w-[1170px] text-balance text-[clamp(26px,7.2vw,53px)] leading-[1.15] text-black">
                 {HEADLINE}
             </h1>
 

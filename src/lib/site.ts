@@ -23,6 +23,10 @@ export const ADDRESS = {
     zip: "77095",
 };
 
+/** Shown in the footer so the site clearly says what the business does
+ *  (an A2P reviewer checks for this). */
+export const SERVICES_LINE = "Interior and exterior painting, cabinet refinishing, trim and doors, and drywall repair.";
+
 export const SERVICE_AREA = "Cypress, Katy, Spring, The Woodlands, Magnolia, Conroe and the greater Houston area";
 
 export const PRIVACY_PATH = "/privacy-policy";

@@ -209,7 +209,7 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
                 {/* Progress */}
                 <div className="mb-5 flex items-center gap-3">
                     {step > 0 ? (
-                        <button type="button" onClick={() => go(step - 1)} className="-ml-1 inline-flex items-center gap-1 rounded text-[14px] font-medium text-slate hover:text-ink">
+                        <button type="button" onClick={() => go(step - 1)} className="-my-2 -ml-1 inline-flex items-center gap-1 rounded py-2 pr-1 text-[14px] font-medium text-slate hover:text-ink">
                             <ArrowLeft className="h-4 w-4" aria-hidden="true" /> Back
                         </button>
                     ) : null}
@@ -265,8 +265,11 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
                             <input type="email" inputMode="email" aria-label="Email" placeholder="Email" autoComplete="email" value={f.email} onChange={set("email")} className={`field ${errors.email ? "field-error" : ""}`} />
                         </Field>
                         <Field error={errors.phone}>
-                            <input type="tel" inputMode="tel" aria-label="Phone (optional)" placeholder="Phone (optional)" autoComplete="tel" value={f.phone} onChange={set("phone")} className={`field ${errors.phone ? "field-error" : ""}`} />
+                            <input type="tel" inputMode="tel" aria-label="Phone (optional)" aria-describedby="phone-sms-note" placeholder="Phone (optional)" autoComplete="tel" value={f.phone} onChange={set("phone")} className={`field ${errors.phone ? "field-error" : ""}`} />
                         </Field>
+                        <p id="phone-sms-note" className="text-[13px] leading-snug text-slate">
+                            Want text updates? Check the text message box below the form. It's optional.
+                        </p>
                     </div>
                 )}
 
