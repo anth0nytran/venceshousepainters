@@ -13,7 +13,8 @@ import { CONSENT_TEXT, PHONE_DISPLAY, PHONE_TEL, PRIVACY_PATH, TERMS_PATH } from
      - phone number is OPTIONAL (no required attribute, no asterisk)
      - SMS consent checkbox is optional and NOT pre-checked
      - consent text names the business, frequency, rates, HELP/STOP
-       and links Privacy Policy & Terms; it's visible on arrival
+       and links Privacy Policy & Terms; it's inside the card on every
+       step, so it's visible on arrival
      - separate required "18 or older" confirmation
      - opt-in proof (text, timestamp, page URL) sent with the lead
    Submits to /api/send.
@@ -131,7 +132,7 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
         }
         if (current.kind === "address") {
             if (f.address.trim().length < 5) e.address = "Please type the address.";
-            if (!ageConfirm) e.age = "Please check the box below that says you are 18 or older.";
+            if (!ageConfirm) e.age = "Please check the box above that says you are 18 or older.";
         }
         setErrors(e);
         return Object.keys(e).length === 0;
@@ -187,6 +188,33 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
     };
 
     const card = "rounded-2xl border border-brand-soft bg-white p-6";
+    const isLast = step === STEPS.length - 1;
+
+    // ---- A2P consent, inside the card so it reads in order ----
+    // Steps 1-5: right under the button (visible from the first screen, which
+    // carrier review needs). Last step: above "Get my 3 prices", so the flow is
+    // fill in, tick, submit, with no scrolling down to find the boxes.
+    const consentBlock = (
+        <div className={`space-y-3 text-left ${isLast ? "mt-5" : "mt-6 border-t border-line pt-5"}`}>
+            <label className={`flex cursor-pointer items-center gap-3 rounded-lg ${errors.age ? "bg-red-50 p-2 ring-1 ring-red-400" : ""}`}>
+                <input
+                    type="checkbox"
+                    checked={ageConfirm}
+                    onChange={(e) => { setAgeConfirm(e.target.checked); if (errors.age) setErrors((er) => { const n = { ...er }; delete n.age; return n; }); }}
+                    className="h-5 w-5 flex-shrink-0 accent-brand"
+                />
+                <span className="text-[15px] font-medium text-ink">I am 18 or older. (Required)</span>
+            </label>
+            <label className="flex cursor-pointer items-start gap-3">
+                <input type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 h-5 w-5 flex-shrink-0 accent-brand" />
+                <span className="text-[12.5px] leading-[1.55] text-ink/75">
+                    {CONSENT_TEXT}{" "}
+                    <Link to={PRIVACY_PATH} className="font-semibold text-brand underline">Privacy Policy</Link> &amp;{" "}
+                    <Link to={TERMS_PATH} className="font-semibold text-brand underline">Terms</Link>.
+                </span>
+            </label>
+        </div>
+    );
 
     if (submitted) {
         return (
@@ -268,7 +296,7 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
                             <input type="tel" inputMode="tel" aria-label="Phone (optional)" aria-describedby="phone-sms-note" placeholder="Phone (optional)" autoComplete="tel" value={f.phone} onChange={set("phone")} className={`field ${errors.phone ? "field-error" : ""}`} />
                         </Field>
                         <p id="phone-sms-note" className="text-[13px] leading-snug text-slate">
-                            Want text updates? Check the text message box below the form. It's optional.
+                            Want text updates? Check the text message box below. It's optional.
                         </p>
                     </div>
                 )}
@@ -279,41 +307,24 @@ export default function EstimateForm({ afterCard }: { afterCard?: React.ReactNod
                     </Field>
                 )}
 
+                {isLast && consentBlock}
+
                 {errors.age && <p className="mt-4 rounded-lg bg-red-50 px-3 py-2 text-[14px] font-medium text-red-700" role="alert">{errors.age}</p>}
                 {apiError && <p className="mt-4 rounded-lg bg-red-50 px-3 py-2 text-[14px] font-medium text-red-700" role="alert">{apiError}</p>}
 
                 {current.kind !== "choice" && (
-                    <div className="mt-8">
+                    <div className={isLast ? "mt-6" : "mt-8"}>
                         <button type="submit" disabled={submitting} className="btn-cta">
                             {submitting ? (<><Loader2 className="h-5 w-5 animate-spin" aria-hidden="true" /> Sending</>) : current.button}
                         </button>
                         <p className="mt-3 text-center text-[14px] font-medium text-ink">Free. Takes about 60 seconds.</p>
                     </div>
                 )}
+
+                {!isLast && consentBlock}
             </form>
 
             {afterCard}
-
-            {/* ---- A2P consent: visible on arrival, below the card like the roadmap page's fine print ---- */}
-            <div className="mt-7 space-y-3 text-left">
-                <label className="flex cursor-pointer items-start gap-3">
-                    <input type="checkbox" checked={smsConsent} onChange={(e) => setSmsConsent(e.target.checked)} className="mt-0.5 h-5 w-5 flex-shrink-0 accent-brand" />
-                    <span className="text-[13px] leading-[1.55] text-ink/75">
-                        {CONSENT_TEXT}{" "}
-                        <Link to={PRIVACY_PATH} className="font-semibold text-brand underline">Privacy Policy</Link> &amp;{" "}
-                        <Link to={TERMS_PATH} className="font-semibold text-brand underline">Terms</Link>.
-                    </span>
-                </label>
-                <label className={`flex cursor-pointer items-center gap-3 rounded-lg ${errors.age ? "bg-red-50 p-2 ring-1 ring-red-400" : ""}`}>
-                    <input
-                        type="checkbox"
-                        checked={ageConfirm}
-                        onChange={(e) => { setAgeConfirm(e.target.checked); if (errors.age) setErrors((er) => { const n = { ...er }; delete n.age; return n; }); }}
-                        className="h-5 w-5 flex-shrink-0 accent-brand"
-                    />
-                    <span className="text-[15px] font-medium text-ink">I am 18 or older. (Required)</span>
-                </label>
-            </div>
         </>
     );
 }
