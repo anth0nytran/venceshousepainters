@@ -1,10 +1,10 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { Resend } from "resend";
-import { pushToGhl } from "./_ghl";
-import { sendMetaLead } from "./_meta";
-import { assess, verifyTurnstile } from "./_spam";
-import { SERVICES, SITUATIONS, TIMELINES, byValue } from "./_estimate";
-import { BRAND_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_URL } from "./_site";
+import { pushToGhl } from "./_ghl.js";
+import { sendMetaLead } from "./_meta.js";
+import { assess, verifyTurnstile } from "./_spam.js";
+import { SERVICES, SITUATIONS, TIMELINES, byValue } from "./_estimate.js";
+import { BRAND_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_URL } from "./_site.js";
 
 export const config = { runtime: "nodejs" };
 
