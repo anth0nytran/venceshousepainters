@@ -3,8 +3,8 @@ import { Resend } from "resend";
 import { pushToGhl } from "./_ghl";
 import { sendMetaLead } from "./_meta";
 import { assess, verifyTurnstile } from "./_spam";
-import { SERVICES, SITUATIONS, TIMELINES, byValue } from "../src/lib/estimate";
-import { BRAND_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_URL } from "../src/lib/site";
+import { SERVICES, SITUATIONS, TIMELINES, byValue } from "./_estimate";
+import { BRAND_NAME, PHONE_DISPLAY, PHONE_TEL, SITE_URL } from "./_site";
 
 export const config = { runtime: "nodejs" };
 

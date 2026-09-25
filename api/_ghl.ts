@@ -22,7 +22,7 @@
    Not configured = no-op. Lead capture never depends on GHL.
    ============================================================ */
 
-import { SITE_URL } from "../src/lib/site";
+import { SITE_URL } from "./_site";
 
 export interface GhlLead {
     fullName: string;
